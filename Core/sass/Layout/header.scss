@@ -1,0 +1,138 @@
+.site-header {
+    width: 100%;
+    .top-header {
+        height: 55px;
+        border-bottom: 1px solid #ddd;
+        @include clearit;
+        .top-left {
+            position: relative;
+            top: 6px;
+            float: left;
+            display: inline-block;
+            padding: 10px 0;
+            .humburger-btn {
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 5px;
+                width: 22px;
+                height: 14px;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    display: block;
+                    width: 22px;
+                    height: 3px;
+                    background: #333;
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
+                }
+            }
+            a,
+            span {
+                font-family: "adelle_sansregular";
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $hitam;
+            }
+            .cari-btn {
+                margin-left: 35px;
+                a {
+                    text-decoration: none;
+                    i {
+                        font-size: 18px;
+                        margin-right: 2px;
+                    }
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+        .top-right {
+            float: right;
+            position: relative;
+            top: 7px;
+            .multi-lang {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+                a {
+                    display: inline-block;
+                    padding: 6px 8px;
+                    font-family: "adelle_sanssemibold";
+                    font-size: 10.42px;
+                    text-transform: uppercase;
+                    background: $abu-mid;
+                    color: white;
+                    &.select-lang {
+                        background: $abu-gelap;
+                    }
+                }
+            }
+            a {
+                font-family: "adelle_sansregular";
+                font-size: 14px;
+                text-transform: uppercase;
+                display: inline-block;
+                vertical-align: middle;
+                color: $hitam;
+            }
+            a.btn {
+                text-transform: none;
+                margin-left: 20px;
+                color: white;
+            }
+        }
+    }
+    .second-header {
+        padding: 20px 0 30px;
+        @include clearit;
+        .second-left {
+            float: left;
+            time {
+                padding: 23px 0 0;
+                margin-left: 80px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .second-right {
+            float: right;
+            position: relative;
+            top: 26px;
+            font-family: "adelle_sansregular";
+            font-size: 12px;
+            text-transform: uppercase;
+            .social-media {
+                position: relative;
+                top: 5px;
+                margin-left: 22px;
+                a {
+                    display: inline-block;
+                    font-size: 25px;
+                    margin-right: 10px;
+                    &:nth-child(1) {
+                        color: $tw;
+                    }
+                    &:nth-child(2) {
+                        color: $fb;
+                    }
+                    &:nth-child(3) {
+                        color: $gp;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
