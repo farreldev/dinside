@@ -8,7 +8,10 @@
 
 .homepage {
 	.headlines-article {
-		max-height: 452px;
+		height: 452px;
+		@include breakpoint(mobile) {
+			height: auto;
+		}
 		img {
 			width: 100%;
 			height: 452px;
@@ -24,18 +27,7 @@
 			} 
 			background: $hitam;
 			color: white;
-			article {
-				h5 {
-					font-family: "adelle_sansextrabold";
-					font-size: 14px;
-					text-transform: uppercase;
-					color: $orange;
-				}
-				h1 {
-					font-family: "adelle_sansbold";
-					font-size: 57px;
-					padding: 15px 0;
-				}
+			article {				
 				p {
 					padding: 20px 0;
 					font-size: 21px;

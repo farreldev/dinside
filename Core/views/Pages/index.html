@@ -4,27 +4,43 @@
         ]
 })
 
-        <section class="homepage">
-            <div class="headlines-article">
+        <div class="homepage">
+            <section class="headlines-article">
                 <div class="row no-gap">
                     <div class="col-md-6">
                         <img src="assets/images/photo-headlines/astra.jpg" alt="">
                     </div>
                     <div class="col-md-6 article-info">
                         <article>
-                            <h5>Korporasi</h5>
-                            <h1>Astra Bersiap Jadi Penguasa Jalan Tol Trans Jawa</h1>
+                            <h5><a href="">Korporasi</a></h5>
+                            <h1><a href="">Astra Bersiap Jadi Penguasa Jalan Tol Trans Jawa</a></h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                 Maecenas fermentum, magna quis semper pretium, ante tortor egestas nibh, laoreet interdum enim justo nec nibh. 
                                 Quisque lacinia elit est, ac volutpat odio laoreet quis.</p>
                         </article>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                
-            </div>
-        </section>
+            </section>
+            <section class="two-col-left-big">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            @@include('../Shared/list-berita.html')
+                        </div>
+                        <div class="col-md-4">
+                            @@include('../Shared/popular-tags.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hightlights">
+                <div class="container">
+                    <div class="row">
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
 
 @@include('../Shared/footer.html', {
         "script": [
