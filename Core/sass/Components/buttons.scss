@@ -3,10 +3,11 @@ button.btn,
 input[type='button'].btn {
     display: inline-block;
     padding: 8px 25px;
-    font-size: 14px;
+    font-family: "adelle_sanslight";
+    font-size: 16px;
     color: #333333;
     background: #FFFFFF;
-    // border: 1px darken(#FFFFFF, 8%) solid;
+    border: 1px darken(#FFFFFF, 8%) solid;
     border-radius: 0;
     vertical-align: middle;
 
@@ -29,6 +30,7 @@ input[type='button'].btn {
             background: $background;
             color: $font_color;
             // border-color: darken($background, 8%);
+            border-color: $background;
 
             &:hover {
                 background: darken($background, 5%);

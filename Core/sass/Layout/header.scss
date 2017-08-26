@@ -1,6 +1,7 @@
 .site-header {
     width: 100%;
     .top-header {
+        text-align: center;
         height: 55px;
         border-bottom: 1px solid #ddd;
         @include clearit;
@@ -58,6 +59,16 @@
                 }
             }
         }
+        .top-center {
+            position: relative;
+            top: 6px;
+            display: inline-block;
+            width: 156px;
+            margin: 0 auto;
+            img {
+                width: inherit;
+            }
+        }
         .top-right {
             float: right;
             position: relative;
@@ -88,6 +99,8 @@
                 color: $hitam;
             }
             a.btn {
+                font-family: "adelle_sanslight";
+                font-size: 16px;
                 text-transform: none;
                 margin-left: 20px;
                 color: white;
