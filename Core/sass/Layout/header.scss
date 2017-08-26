@@ -126,26 +126,6 @@
             font-family: "adelle_sansregular";
             font-size: 12px;
             text-transform: uppercase;
-            .social-media {
-                position: relative;
-                top: 5px;
-                margin-left: 22px;
-                a {
-                    display: inline-block;
-                    font-size: 25px;
-                    margin-right: 10px;
-                    &:nth-child(1) {
-                        color: $tw;
-                    }
-                    &:nth-child(2) {
-                        color: $fb;
-                    }
-                    &:nth-child(3) {
-                        color: $gp;
-                        margin-right: 0;
-                    }
-                }
-            }
         }
     }
 }
