@@ -51,7 +51,7 @@ var paths = {
         {
             vendor:
                 [
-                    path.join(__dirname, "bower_components/javascript/defer_parsing.js"),
+                    // path.join(__dirname, "bower_components/javascript/defer_parsing.js"),
                     path.join(__dirname, "bower_components/jquery/dist/jquery.min.js"),
                     path.join(__dirname, "bower_components/bootstrap/dist/js/bootstrap.min.js"),
                 ],
@@ -68,17 +68,17 @@ var paths = {
             app:
                 [
                     path.join(__dirname, 'script/*.js')
-                ],
-            includes: 
-                [
-                    path.join(__dirname, 'script/*Includes*/*.js')
                 ]
+            // includes: 
+            //     [
+            //         path.join(__dirname, 'script/*Includes*/*.js')
+            //     ]
         }
 }
 
 // --------------------------------------------------------- INIT TASK //
 
-gulp.task('init', ['sass', 'sass_vendor', 'sass_plugins', 'pages', 'js', 'js_vendor', 'js_plugins', 'js_custom']);
+gulp.task('init', ['sass', 'sass_vendor', 'sass_plugins', 'pages', 'js', 'js_vendor', 'js_plugins']);
 
 // --------------------------------------------------------- SET TASK FOR WATCHER //
 
@@ -124,10 +124,10 @@ gulp.task('clean-js_plugins', function () {
   return gulp.src(path.join(__dirname, targetPath + '/assets/js/plugins.min.js'), {read: false})
     .pipe(clean({force: true}));
 });
-gulp.task('clean-js_custom', function () {
-  return gulp.src(path.join(__dirname, targetPath + '/assets/js/*Includes*/*.js'), {read: false})
-    .pipe(clean({force: true}));
-});
+// gulp.task('clean-js_custom', function () {
+//   return gulp.src(path.join(__dirname, targetPath + '/assets/js/*Includes*/*.js'), {read: false})
+//     .pipe(clean({force: true}));
+// });
 // CLEANER
 
 // copy HTML task
@@ -245,11 +245,11 @@ gulp.task('js_plugins', ['clean-js_plugins'], function () {
         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/js/')));
 });
 
-gulp.task('js_custom', ['clean-js_custom'], function () {
-    return gulp.src(paths.js.includes)
-        //.pipe(uglifyjs())
-        .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/js/')));
-});
+// gulp.task('js_custom', ['clean-js_custom'], function () {
+//     return gulp.src(paths.js.includes)
+//          //.pipe(uglifyjs())
+//         .pipe(gulp.dest(path.join(__dirname, targetPath + '/assets/js/')));
+// });
 
 // --------------------------------------------------------- SET SHOW WATCHER //
 
@@ -259,7 +259,7 @@ gulp.task('watch', function(){
     watch(paths.js.app, function() { runs('js'); });  
     watch(paths.js.plugins, function() { runs('js_plugins'); });
     watch(paths.js.vendor, function() { runs('js_vendor'); });
-    watch(paths.js.includes, function() { runs('js_custom'); });
+    // watch(paths.js.includes, function() { runs('js_custom'); });
     watch(paths.css.vendor, function() { runs('sass_vendor'); });
     watch(paths.css.plugins, function() { runs('sass_plugins'); });
     watch(paths.pages, function() { runs('pages'); });

@@ -1,0 +1,34 @@
+.author,
+.footer-article {
+    margin-bottom: 36px;
+    h5 {
+        display: inline-block;
+    }
+    ul {
+        margin: 0;
+        display: inline-block;
+        li {
+            padding: 0 18px;
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-right: 1px solid $abu;
+            color: $abu;
+            @include breakpoint(mobile) {
+                padding: 0 10px;
+                font-size: 10px;
+            }
+            a {
+                color: $abu;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+.author {
+    position: relative;
+    top: 8px;
+    margin-bottom: 0;
+}
