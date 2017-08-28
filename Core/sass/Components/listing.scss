@@ -1,3 +1,4 @@
+.search-result-list,
 .recent-update,
 .article-list {
     article {
@@ -45,6 +46,7 @@
     }
 }
 
+.search-result-list,
 .article-list {
     margin-bottom: 30px;
     article {
@@ -61,6 +63,28 @@
         text-transform: uppercase;
         &:hover {
             border: 1px solid darken(#d7d7d7, 8%);
+        }
+    }
+}
+
+.info-search-results {
+    span {
+        margin-bottom: 20px;
+        padding: 25px 0 20px;
+        display: block;
+        font-family: "adelle_sansregular";
+        font-size: 14px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #dddddd;
+        q {
+            &:before {
+                font-size: 16px;
+                content: '"';
+            }
+            &:after {
+                font-size: 16px;
+                content: '"';
+            }
         }
     }
 }
