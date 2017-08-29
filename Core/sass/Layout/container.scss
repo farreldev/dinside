@@ -29,7 +29,10 @@
         }
     }
     .sub-head-child-pages {
-        padding: 65px 0 10px;
+        // padding: 65px 0 10px;
+        position: relative;
+        @include clearit;
+        height: 83px;
         border-bottom: 1px solid #aaaaaa;
     }
 }

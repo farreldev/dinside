@@ -45,31 +45,42 @@
                 @include clearit;
                 img {
                     float: left;
+                    position: relative;
+                    left: -22px;
                     width: 22px;
                     margin-right: 15px;
+                    position: relative;
                     margin-bottom: 50px;
                     @include breakpoint(mobile) {
+                        float: left;
+                        left: 0;
                         margin-bottom: 0;
                     }
                 }
                 p {
                     position: relative;
+                    left: -20px;
                     top: -5px;
                     font-family: "adelle_sanslight";
                     font-size: 14px;
                     line-height: 1.7em;
                     color: #999999;
+                    @include breakpoint(mobile) {
+                        padding: 0 15px; 
+                        left: 0;
+                    }
                 }
             }
         }
         .small-image {
-            position: relative;
             float: left;
-            left: -30px;
+            margin-right: 25px;
+            margin-left: -75px;
             width: 420px;
             @include breakpoint(mobile) {
                 float: none;
-                left: 0;
+                margin-left: 0;
+                margin-right: 0;
                 width: 100%;
             }
             figure {
@@ -119,6 +130,13 @@
                     font-family: "adelle_sansbold";
                     font-size: 24px;
                     margin-bottom: 28px;
+                    a {
+                        font-family: inherit;
+                        font-size: inherit;
+                        text-transform:none;
+                        border-right: none;
+                        color: $hitam;
+                    }
                 }
                 a,time {
                     font-family: "adelle_sansregular";
