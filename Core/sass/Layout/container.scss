@@ -33,6 +33,14 @@
         position: relative;
         @include clearit;
         height: 83px;
-        border-bottom: 1px solid #aaaaaa;
+        border-bottom: 1px solid #aaaaaa; 
+        h2 {
+            position: relative;
+            top: 28px;
+            font-family: "adelle_sansextrabold";
+            font-size: 46px;
+            text-transform: uppercase;
+            color: $orange;
+        }
     }
 }
